@@ -10,7 +10,19 @@ st.set_page_config(page_title="Power Predictor", layout="centered")
 st.title("⚡ Electricity Consumption Predictor")
 
 # Load model
-model = joblib.load("model.pkl")
+import requests
+
+@st.cache_resource
+def load_model():
+    url = "https://drive.google.com/uc?id=1QzuNaxiIpWmfV7b4_hrMjooEEBYP4-10"
+    response = requests.get(url)
+    
+    with open("model.pkl", "wb") as f:
+        f.write(response.content)
+    
+    return joblib.load("model.pkl")
+
+model = load_model()
 
 st.markdown("### Enter Input Values")
 

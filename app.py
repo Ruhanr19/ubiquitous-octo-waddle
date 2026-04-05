@@ -133,7 +133,7 @@ with col3:
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.markdown("<h3>🌍 Environment</h3>", unsafe_allow_html=True)
 
-    st.markdown('<div class="label">Intensity (0 - 25)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="label">High Voltage Appliances (0 - 25)</div>', unsafe_allow_html=True)
     Global_intensity = st.number_input("", 0.0, 25.0, 5.0, key="gi")
 
     st.markdown('<div class="label">External Temperature (0 - 50)</div>', unsafe_allow_html=True)

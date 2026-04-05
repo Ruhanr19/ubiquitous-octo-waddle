@@ -151,8 +151,8 @@ col4, col5 = st.columns(2)
 with col4:
     date = st.date_input(
         "Select Date",
-        min_value=pd.to_datetime("2023-01-01"),
-        max_value=pd.to_datetime("2025-12-31")
+        min_value=pd.to_datetime("2010-01-01"),
+        max_value=pd.to_datetime("2013-12-31")
     )
 
 with col5:

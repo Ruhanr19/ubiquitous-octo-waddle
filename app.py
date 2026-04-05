@@ -134,7 +134,7 @@ with col3:
     st.markdown("<h3>🌍 Environment</h3>", unsafe_allow_html=True)
 
     st.markdown('<div class="label">Intensity (0 - 50)</div>', unsafe_allow_html=True)
-    Global_intensity = st.number_input("", 0.0, 50.0, 5.0, key="gi")
+    Global_intensity = st.number_input("", 0.0, 25.0, 5.0, key="gi")
 
     st.markdown('<div class="label">External Temperature (0 - 50)</div>', unsafe_allow_html=True)
     Sub_metering_3 = st.number_input("", 0.0, 50.0, 0.0, key="sm3")
@@ -171,7 +171,7 @@ if st.button("Predict ⚡"):
             Sub_metering_1, Sub_metering_2, Sub_metering_3,
             hour, day, month
         ]], columns=[
-            'Global_reactive_power','Voltage','Global_intensity',
+            'Global_reactive_power','Voltage','High Voltage Appliances',
             'Sub_metering_1','Sub_metering_2','Sub_metering_3',
             'hour','day','month'
         ])

@@ -186,8 +186,8 @@ if st.button("Predict ⚡"):
 
         st.markdown(f"""
         <div class="result">
-            <h2>⚡ {prediction:.4f}*10 kW</h2>
-            <p>Energy (1 hour): {prediction:.4f}*10 kWh</p>
+            <h2>⚡ {prediction:.4f} kW</h2>
+            <p>Energy (1 hour): {prediction:.4f} kWh</p>
         </div>
         """, unsafe_allow_html=True)
 
